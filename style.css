@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.grid-flow {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+.grid-flow[data-spacing="large"] {
+  gap: 2rem;
+}
+.results {
+  color: var(--Light-Blue, #cac9ff);
+  text-align: center;
+  border-radius: 32px;
+  background: var(
+    --Gradient-1,
+    linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
+  );
+  padding: var(--padding);
+}
+.result-summary {
+  --padding: 2.5rem;
+}
+
+@media (min-width: 600px) {
+  .result-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 736px;
+    height: 512px;
+    margin-inline: 1rem;
+    border-radius: 32px;
+    background: var(--White, #fff);
+    box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
+  }
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.result-score {
+  display: grid;
+  place-content: center;
+  width: 12rem;
+  margin-inline: auto;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background: var(
+    --Gradient-2,
+    linear-gradient(
+      180deg,
+      #4d21c9 0%,
+      rgba(37, 33, 201, 0) 100%,
+      rgba(37, 33, 201, 0) 100%
+    )
+  );
+}
+
+.result-score span {
+  color: white;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 72px;
+}
+
+.result-rank {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.summary {
+  padding: var(--padding);
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ac9c9c;
+}
+
+.button {
+  background: var(--Dark-Navy, #303b59);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1rem 2rem;
+  border-radius: 100vw;
+  cursor: pointer;
+}
+.button:hover,
+.button:focus-visible {
+  background: var(
+    --Gradient-1,
+    linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
+  );
+}
